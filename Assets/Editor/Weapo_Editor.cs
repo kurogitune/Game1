@@ -6,7 +6,82 @@ using System.IO;
 using System;
 using Object = UnityEngine.Object;//Objectの定義を指定
 
-public class Weapo_Editor : EditorWindow
+public class Weapon_EditorOption:EditorWindow//WeaponEditorオプション
+{
+    static string AssetFileName = "/AssetObj";//保存先ファイル
+    static string AssetName = "/Weapon_EditorOptionData.asset";//Assetオブジェクトの名前
+    static Weapon_EditorOptionData WeaponOpData;
+    [MenuItem("EditorEx/WeapoEditorOption")]
+    static void Open()
+    {
+        if (!Directory.Exists(Application.dataPath + AssetFileName))//フォルダー確認
+        {
+            Debug.Log("Editorフォルダー作成");
+            Directory.CreateDirectory(Application.dataPath + AssetFileName);//ない場合作成
+            AssetDatabase.Refresh();//Unityのファイル表示を更新  
+        }
+
+        if (!File.Exists(Application.dataPath + AssetFileName + AssetName))//データがあるか確認
+        {
+            Debug.Log("存在しないため作成");
+            AssetDatabase.CreateAsset(new Weapon_EditorOptionData(), "Assets" + AssetFileName + AssetName);//ない場合作成
+            WeaponOpData = (Weapon_EditorOptionData)AssetDatabase.LoadAssetAtPath("Assets" + AssetFileName + AssetName, typeof(Weapon_EditorOptionData));//ある場合データファイルロード
+        }
+        else
+        {
+            WeaponOpData = (Weapon_EditorOptionData)AssetDatabase.LoadAssetAtPath("Assets"+AssetFileName+AssetName, typeof(Weapon_EditorOptionData));//ある場合データファイルロード
+        }
+
+        GetWindow<Weapon_EditorOption>("WeapoEditorOption"); // タイトル名を指定
+    }
+    Vector2 v2 = Vector2.zero;
+
+    private void OnGUI()
+    {
+        EditorGUILayout.LabelField("WeapoEditorオプション");
+        EditorGUILayout.Space();
+
+        WeaponOpData.Select_Color = EditorGUILayout.ColorField("Select_Color", WeaponOpData.Select_Color);//セレクトカラー
+        WeaponOpData.Null_Color=EditorGUILayout.ColorField("Null",WeaponOpData.Null_Color);//データ無
+        WeaponOpData.Small_caliber_gun_Color = EditorGUILayout.ColorField("Small_caliber_gun_Color", WeaponOpData.Small_caliber_gun_Color);//小口径主砲
+        WeaponOpData.Medium_caliber_gun_Color = EditorGUILayout.ColorField("Medium_caliber_gun_Color", WeaponOpData.Medium_caliber_gun_Color);//中口径主砲
+        WeaponOpData.Large_caliber_gun_Color = EditorGUILayout.ColorField("Large_caliber_gun_Color", WeaponOpData.Large_caliber_gun_Color);//大口径主砲
+        WeaponOpData.Secondary_armament_Color = EditorGUILayout.ColorField("Secondary_armament_Color", WeaponOpData.Secondary_armament_Color);//副砲
+        WeaponOpData.Torpedo_Color = EditorGUILayout.ColorField("Torpedo_Color", WeaponOpData.Torpedo_Color);//魚雷
+        WeaponOpData.Ship_mounted_boat_Color = EditorGUILayout.ColorField("Ship_mounted_boat_Color", WeaponOpData.Ship_mounted_boat_Color);//艦載艇
+        WeaponOpData.Carrier_based_fighter_Color = EditorGUILayout.ColorField("Carrier_based_fighter_Color", WeaponOpData.Carrier_based_fighter_Color);//艦上戦闘機
+        WeaponOpData.Water_fighter_Color = EditorGUILayout.ColorField("Water_fighter_Color", WeaponOpData.Water_fighter_Color);//水上戦闘機
+        WeaponOpData.Shipboard_bomber_Color = EditorGUILayout.ColorField("Shipboard_bomber_Color", WeaponOpData.Shipboard_bomber_Color);//艦上爆撃機
+        WeaponOpData.Water_bomber_Color = EditorGUILayout.ColorField("Water_bomber_Color", WeaponOpData.Water_bomber_Color);//水上爆撃機
+        WeaponOpData.Carrier_based_attack_aircraft_Color = EditorGUILayout.ColorField("Carrier_based_attack_aircraft_Color", WeaponOpData.Carrier_based_attack_aircraft_Color);//艦上攻撃機
+        WeaponOpData.Ship_reconnaissance_aircraft_Color = EditorGUILayout.ColorField("Ship_reconnaissance_aircraft_Color", WeaponOpData.Ship_reconnaissance_aircraft_Color);//艦上偵察機
+        WeaponOpData.Water_reconnaissance_aircraft_Color = EditorGUILayout.ColorField("Water_reconnaissance_aircraft_Color", WeaponOpData.Water_reconnaissance_aircraft_Color);//水上偵察機
+        WeaponOpData.Anti_submarine_patrol_aircraft_Color = EditorGUILayout.ColorField("Anti_submarine_patrol_aircraft_Color", WeaponOpData.Anti_submarine_patrol_aircraft_Color);//対潜哨戒機
+        WeaponOpData.Electric_search_Color = EditorGUILayout.ColorField("Electric_search_Color", WeaponOpData.Electric_search_Color);//電探
+        WeaponOpData.Organ_Color = EditorGUILayout.ColorField("Organ_Color", WeaponOpData.Organ_Color);//機関
+        WeaponOpData.Enhanced_bullet_Color = EditorGUILayout.ColorField("Enhanced_bullet_Color", WeaponOpData.Enhanced_bullet_Color);//強化弾
+        WeaponOpData.Anti_aircraft_machine_gun_Color = EditorGUILayout.ColorField("Anti_aircraft_machine_gun_Color", WeaponOpData.Anti_aircraft_machine_gun_Color);//対空機銃
+        WeaponOpData.Anti_aircraft_device_Color = EditorGUILayout.ColorField("Anti_aircraft_device_Color", WeaponOpData.Anti_aircraft_device_Color);//高射装置
+        WeaponOpData.Depth_charge_Color = EditorGUILayout.ColorField("Depth_charge_Color", WeaponOpData.Depth_charge_Color);//爆雷
+        WeaponOpData.Sonar_Color = EditorGUILayout.ColorField("Sonar_Color", WeaponOpData.Sonar_Color);//ソナー
+        WeaponOpData.Repai_personnel_Color = EditorGUILayout.ColorField("Repai_personnel_Color", WeaponOpData.Repai_personnel_Color);//修理要員
+        WeaponOpData.Expansion_basil_Color = EditorGUILayout.ColorField("Expansion_basil_Color", WeaponOpData.Expansion_basil_Color);//増設バジル
+        WeaponOpData.No_classification_Color = EditorGUILayout.ColorField("No_classification_Color", WeaponOpData.No_classification_Color);//分類無
+        WeaponOpData.Land_attack_aircraft_Color = EditorGUILayout.ColorField("Land_attack_aircraft_Color", WeaponOpData.Land_attack_aircraft_Color);//陸上攻撃機
+        WeaponOpData.Land_reconnaissance_aircraft_Color = EditorGUILayout.ColorField("Land_reconnaissance_aircraft_Color", WeaponOpData.Land_reconnaissance_aircraft_Color);//陸上偵察機
+        WeaponOpData.Local_fighter_Color = EditorGUILayout.ColorField("Local_fighter_Color", WeaponOpData.Local_fighter_Color);//局地戦闘機
+        WeaponOpData.Army_fighter_Color = EditorGUILayout.ColorField("Army_fighter_Color", WeaponOpData.Army_fighter_Color);//陸軍戦闘機
+
+        if (GUILayout.Button("Save"))
+        {
+            EditorUtility.SetDirty(WeaponOpData);//指定したScriptObject変更を記録
+            AssetDatabase.SaveAssets();//ScriptObjectをセーブする
+        }
+    }
+}
+
+
+public class Weapo_Editor : EditorWindow//武器エディタ
 {
 
     static string AssetFileName = "/AssetObj/WeapoAsset";
@@ -64,7 +139,6 @@ public class Weapo_Editor : EditorWindow
            {
                 string path = dir + "/" +fild[i].Name;
                 string WeaponName = fild[i].Name.Substring(0, fild[i].Name.Length - 6);
-
                 Weapondata[i] = (WeaponData) AssetDatabase.LoadAssetAtPath(path,typeof(WeaponData));
            }
 
@@ -125,11 +199,11 @@ public class Weapo_Editor : EditorWindow
                                     break;
 
                                 case WeaponType.Water_fighter://水上戦闘機
-                                    GUI.backgroundColor = Color.green;
+                                    GUI.backgroundColor = Color.green + Color.yellow;
                                     break;
 
                                 case WeaponType.Shipboard_bomber://艦上爆撃機
-                                    GUI.backgroundColor = Color.green;
+                                    GUI.backgroundColor =  Color.red + Color.red;
                                     break;
 
                                 case WeaponType.Water_bomber://水上爆撃機
@@ -137,7 +211,7 @@ public class Weapo_Editor : EditorWindow
                                     break;
 
                                 case WeaponType.Carrier_based_attack_aircraft://艦上攻撃機
-                                    GUI.backgroundColor = Color.green;
+                                    GUI.backgroundColor = Color.green + Color.blue;
                                     break;
 
                                 case WeaponType.Ship_reconnaissance_aircraft://艦上偵察機
@@ -153,7 +227,7 @@ public class Weapo_Editor : EditorWindow
                                     break;
 
                                 case WeaponType.Electric_search://電探
-                                   
+                                    GUI.backgroundColor = Color.green + Color.red + Color.red;
                                     break;
 
                                 case WeaponType.Organ://機関

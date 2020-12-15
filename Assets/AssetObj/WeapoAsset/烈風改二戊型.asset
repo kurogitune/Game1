@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   No: 166
   WeaponName: "\u70C8\u98A8\u6539\u4E8C\u620A\u578B"
-  Rarity: 5
+  Rarity: 6
+  BookNo: 338
   FirepowerP: 2
   ThunderstormP: 0
   BombP: 0
@@ -26,6 +27,8 @@ MonoBehaviour:
   ArmorP: 0
   Range: 0
   Radius: 5
+  Refurbishment_Count: 0
+  development: 0
   Equipable_ship_type: 000000000101000000
   Type: 7
-  IMag: {fileID: 0}
+  Imag: {fileID: 21300000, guid: 184986361c725fa45a7c87c8d881b0a0, type: 3}

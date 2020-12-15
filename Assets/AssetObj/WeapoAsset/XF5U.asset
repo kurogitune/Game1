@@ -15,6 +15,7 @@ MonoBehaviour:
   No: 171
   WeaponName: XF5U
   Rarity: 6
+  BookNo: 375
   FirepowerP: 0
   ThunderstormP: 0
   BombP: 0
@@ -26,6 +27,8 @@ MonoBehaviour:
   ArmorP: 0
   Range: 0
   Radius: 4
+  Refurbishment_Count: 0
+  development: 0
   Equipable_ship_type: 000000000101000000
   Type: 7
-  IMag: {fileID: 0}
+  Imag: {fileID: 21300000, guid: 842f5f807dd96be4d8ecf4c305be33b1, type: 3}

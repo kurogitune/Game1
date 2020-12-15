@@ -15,6 +15,7 @@ MonoBehaviour:
   No: 138
   WeaponName: Fulmar
   Rarity: 2
+  BookNo: 249
   FirepowerP: 1
   ThunderstormP: 0
   BombP: 0
@@ -26,6 +27,8 @@ MonoBehaviour:
   ArmorP: 0
   Range: 0
   Radius: 4
+  Refurbishment_Count: 0
+  development: 1
   Equipable_ship_type: 000000000101000000
   Type: 7
-  IMag: {fileID: 0}
+  Imag: {fileID: 21300000, guid: c55c6beb1f600ad4480cef5aaaefa47c, type: 3}

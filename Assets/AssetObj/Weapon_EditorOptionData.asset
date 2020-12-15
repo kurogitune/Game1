@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8819332b28dbfa34e80c93e708e7cd20, type: 3}
+  m_Name: Weapon_EditorOptionData
+  m_EditorClassIdentifier: 
+  Select_Color: {r: 0, g: 0, b: 0, a: 1}
+  Null_Color: {r: 1, g: 1, b: 1, a: 1}
+  Small_caliber_gun_Color: {r: 1, g: 0, b: 0, a: 1}
+  Medium_caliber_gun_Color: {r: 1, g: 0, b: 0, a: 1}
+  Large_caliber_gun_Color: {r: 1, g: 0, b: 0, a: 1}
+  Secondary_armament_Color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  Torpedo_Color: {r: 0, g: 0, b: 1, a: 1}
+  Ship_mounted_boat_Color: {r: 0, g: 0, b: 0, a: 0}
+  Carrier_based_fighter_Color: {r: 0, g: 0, b: 0, a: 0}
+  Water_fighter_Color: {r: 0, g: 0, b: 0, a: 0}
+  Shipboard_bomber_Color: {r: 0, g: 0, b: 0, a: 0}
+  Water_bomber_Color: {r: 0, g: 0, b: 0, a: 0}
+  Carrier_based_attack_aircraft_Color: {r: 0, g: 0, b: 0, a: 0}
+  Ship_reconnaissance_aircraft_Color: {r: 0, g: 0, b: 0, a: 0}
+  Water_reconnaissance_aircraft_Color: {r: 0, g: 0, b: 0, a: 0}
+  Anti_submarine_patrol_aircraft_Color: {r: 0, g: 0, b: 0, a: 0}
+  Electric_search_Color: {r: 0, g: 0, b: 0, a: 0}
+  Organ_Color: {r: 0, g: 0, b: 0, a: 0}
+  Enhanced_bullet_Color: {r: 0, g: 0, b: 0, a: 0}
+  Anti_aircraft_machine_gun_Color: {r: 0, g: 0, b: 0, a: 0}
+  Anti_aircraft_device_Color: {r: 0, g: 0, b: 0, a: 0}
+  Depth_charge_Color: {r: 0, g: 0, b: 0, a: 0}
+  Sonar_Color: {r: 0, g: 0, b: 0, a: 0}
+  Repai_personnel_Color: {r: 0, g: 0, b: 0, a: 0}
+  Expansion_basil_Color: {r: 0, g: 0, b: 0, a: 0}
+  No_classification_Color: {r: 0, g: 0, b: 0, a: 0}
+  Land_attack_aircraft_Color: {r: 0, g: 0, b: 0, a: 0}
+  Land_reconnaissance_aircraft_Color: {r: 0, g: 0, b: 0, a: 0}
+  Local_fighter_Color: {r: 0, g: 0, b: 0, a: 0}
+  Army_fighter_Color: {r: 0, g: 0, b: 0, a: 0}

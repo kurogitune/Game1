@@ -15,6 +15,7 @@ MonoBehaviour:
   No: 155
   WeaponName: "Seafire Mk.III\u6539"
   Rarity: 4
+  BookNo: 252
   FirepowerP: 1
   ThunderstormP: 0
   BombP: 0
@@ -26,6 +27,8 @@ MonoBehaviour:
   ArmorP: 1
   Range: 0
   Radius: 4
+  Refurbishment_Count: 0
+  development: 0
   Equipable_ship_type: 000000000101000000
   Type: 7
-  IMag: {fileID: 0}
+  Imag: {fileID: 21300000, guid: 82671caaf04150447a977f3b022a4ee9, type: 3}

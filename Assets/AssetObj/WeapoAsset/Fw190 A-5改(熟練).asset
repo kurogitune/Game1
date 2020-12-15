@@ -15,6 +15,7 @@ MonoBehaviour:
   No: 167
   WeaponName: "Fw190 A-5\u6539(\u719F\u7DF4)"
   Rarity: 5
+  BookNo: 353
   FirepowerP: 2
   ThunderstormP: 0
   BombP: 0
@@ -26,6 +27,8 @@ MonoBehaviour:
   ArmorP: 0
   Range: 0
   Radius: 4
+  Refurbishment_Count: 0
+  development: 0
   Equipable_ship_type: 000000000101000000
   Type: 7
-  IMag: {fileID: 0}
+  Imag: {fileID: 21300000, guid: f2393bb6c0310a14db60e04c6fec1c41, type: 3}

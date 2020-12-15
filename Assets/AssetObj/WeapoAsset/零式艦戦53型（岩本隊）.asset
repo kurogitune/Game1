@@ -15,6 +15,7 @@ MonoBehaviour:
   No: 169
   WeaponName: "\u96F6\u5F0F\u8266\u622653\u578B\uFF08\u5CA9\u672C\u968A\uFF09"
   Rarity: 5
+  BookNo: 157
   FirepowerP: 0
   ThunderstormP: 0
   BombP: 0
@@ -26,6 +27,8 @@ MonoBehaviour:
   ArmorP: 0
   Range: 0
   Radius: 6
+  Refurbishment_Count: 0
+  development: 0
   Equipable_ship_type: 000000000101000000
   Type: 7
-  IMag: {fileID: 0}
+  Imag: {fileID: 21300000, guid: 739ce64f77d1bff49ad8af86bb26de66, type: 3}

@@ -15,6 +15,7 @@ MonoBehaviour:
   No: 141
   WeaponName: F4F-4
   Rarity: 3
+  BookNo: 198
   FirepowerP: 1
   ThunderstormP: 0
   BombP: 0
@@ -26,6 +27,8 @@ MonoBehaviour:
   ArmorP: 0
   Range: 0
   Radius: 4
+  Refurbishment_Count: 0
+  development: 0
   Equipable_ship_type: 000000000101000000
   Type: 7
-  IMag: {fileID: 0}
+  Imag: {fileID: 21300000, guid: ca1654422a33b7d4db5fe9f127188fe1, type: 3}

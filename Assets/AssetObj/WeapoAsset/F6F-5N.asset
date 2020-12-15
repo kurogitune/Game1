@@ -15,6 +15,7 @@ MonoBehaviour:
   No: 162
   WeaponName: F6F-5N
   Rarity: 5
+  BookNo: 255
   FirepowerP: 0
   ThunderstormP: 0
   BombP: 0
@@ -26,6 +27,8 @@ MonoBehaviour:
   ArmorP: 0
   Range: 0
   Radius: 5
+  Refurbishment_Count: 0
+  development: 0
   Equipable_ship_type: 000000000101000000
   Type: 7
-  IMag: {fileID: 0}
+  Imag: {fileID: 21300000, guid: 9a7790b0b41397d43b9c38b763cef52a, type: 3}
