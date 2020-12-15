@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede46caeca6ccd848b7dececd22c5061, type: 3}
+  m_Name: "\u5927\u767A\u52D5\u8247(\u516B\u4E5D\u5F0F\u4E2D\u6226\u8ECA&\u9678\u6226\u968A)"
+  m_EditorClassIdentifier: 
+  No: 132
+  WeaponName: "\u5927\u767A\u52D5\u8247(\u516B\u4E5D\u5F0F\u4E2D\u6226\u8ECA&\u9678\u6226\u968A)"
+  Rarity: 2
+  BookNo: 166
+  FirepowerP: 0
+  ThunderstormP: 0
+  BombP: 0
+  Anti_aircraftP: 0
+  Anti_submarine: 0
+  SearchenemyP: 0
+  Hit_rate: 0
+  Evasion_rate: 0
+  ArmorP: 0
+  Range: 0
+  Radius: 0
+  Refurbishment_Count: 0
+  development: 0
+  Equipable_ship_type: 000000000000010000
+  Type: 6
+  Imag: {fileID: 21300000, guid: e817621e0f5ad31428739d8b4e20ced5, type: 3}

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede46caeca6ccd848b7dececd22c5061, type: 3}
+  m_Name: "16inch Mk.I\u4E09\u9023\u88C5\u7832+AFCT\u6539"
+  m_EditorClassIdentifier: 
+  No: 80
+  WeaponName: "16inch Mk.I\u4E09\u9023\u88C5\u7832+AFCT\u6539"
+  Rarity: 4
+  BookNo: 299
+  FirepowerP: 22
+  ThunderstormP: 0
+  BombP: 0
+  Anti_aircraftP: 0
+  Anti_submarine: 0
+  SearchenemyP: 0
+  Hit_rate: 4
+  Evasion_rate: 0
+  ArmorP: 1
+  Range: 3
+  Radius: 0
+  Refurbishment_Count: 0
+  development: 0
+  Equipable_ship_type: 000000010000000100
+  Type: 3
+  Imag: {fileID: 21300000, guid: 31236edb4ee51c4439b4d2ba2f399799, type: 3}
