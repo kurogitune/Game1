@@ -41,6 +41,7 @@ public class Weapon_EditorOption:EditorWindow//WeaponEditorオプション
         EditorGUILayout.LabelField("WeapoEditorオプション");
         EditorGUILayout.Space();
 
+        EditorGUILayout.LabelField("バックグラウンドカラー");
         WeaponOpData.Select_Color = EditorGUILayout.ColorField("Select_Color", WeaponOpData.Select_Color);//セレクトカラー
         WeaponOpData.Null_Color=EditorGUILayout.ColorField("Null",WeaponOpData.Null_Color);//データ無
         WeaponOpData.Small_caliber_gun_Color = EditorGUILayout.ColorField("Small_caliber_gun_Color", WeaponOpData.Small_caliber_gun_Color);//小口径主砲
@@ -84,7 +85,10 @@ public class Weapon_EditorOption:EditorWindow//WeaponEditorオプション
 public class Weapo_Editor : EditorWindow//武器エディタ
 {
 
-    static string AssetFileName = "/AssetObj/WeapoAsset";
+    static string AssetFileName = "/AssetObj/WeapoAsset";//武器アセットオブジェクトの保存先フォルフダー
+    static string OpAssetFileName = "/AssetObj";//武器エディタオプションデータの保存先
+    static Weapon_EditorOptionData WeaponOpData;
+    static string AssetName = "/Weapon_EditorOptionData.asset";//WeaponEitorオプションデータオブジェクトの名前
     [MenuItem("EditorEx/WeapoEditor %#Z")]
     static void Open()
     {
@@ -100,6 +104,17 @@ public class Weapo_Editor : EditorWindow//武器エディタ
             Directory.CreateDirectory(Application.dataPath + AssetFileName);
             Debug.Log("WeapoAssetフォルダー作成");
             AssetDatabase.Refresh();//Unityのファイル表示を更新  
+        }
+
+        if (!File.Exists(Application.dataPath + OpAssetFileName + AssetName))//データがあるか確認
+        {
+            Debug.Log("存在しないため作成");
+            AssetDatabase.CreateAsset(new Weapon_EditorOptionData(), "Assets" + OpAssetFileName + AssetName);//ない場合作成
+            WeaponOpData = (Weapon_EditorOptionData)AssetDatabase.LoadAssetAtPath("Assets" + OpAssetFileName + AssetName, typeof(Weapon_EditorOptionData));//ある場合データファイルロード
+        }
+        else
+        {
+            WeaponOpData = (Weapon_EditorOptionData)AssetDatabase.LoadAssetAtPath("Assets" + OpAssetFileName + AssetName, typeof(Weapon_EditorOptionData));//ある場合データファイルロード
         }
 
         GetWindow<Weapo_Editor>("WeapoEditor"); // タイトル名を指定
@@ -171,119 +186,119 @@ public class Weapo_Editor : EditorWindow//武器エディタ
                             switch (Weapondata[i].Type)//選択ボタンの色処理 主砲:赤　副砲：黄色　魚雷：青　戦闘機系：緑
                             {
                                 case WeaponType.Small_caliber_gun://小口径主砲
-                                    GUI.backgroundColor = Color.red;
+                                    GUI.backgroundColor = WeaponOpData.Small_caliber_gun_Color;
                                     break;
 
                                 case WeaponType.Medium_caliber_gun://中口径主砲
-                                    GUI.backgroundColor = Color.red;
+                                    GUI.backgroundColor = WeaponOpData.Medium_caliber_gun_Color;
                                     break;
 
                                 case WeaponType.Large_caliber_gun://大口径主砲
-                                    GUI.backgroundColor = Color.red;
+                                    GUI.backgroundColor =WeaponOpData.Large_caliber_gun_Color;
                                     break;
 
                                 case WeaponType.Secondary_armament://副砲
-                                    GUI.backgroundColor = Color.yellow;
+                                    GUI.backgroundColor = WeaponOpData.Secondary_armament_Color;
                                     break;
 
                                 case WeaponType.Torpedo://魚雷
-                                    GUI.backgroundColor = Color.blue;
+                                    GUI.backgroundColor = WeaponOpData.Torpedo_Color;
                                     break;
 
                                 case WeaponType.Ship_mounted_boat://艦載艇
-                                    
+                                    GUI.backgroundColor = WeaponOpData.Ship_mounted_boat_Color;
                                     break;
 
                                 case WeaponType.Carrier_based_fighter://艦上戦闘機
-                                    GUI.backgroundColor = Color.green;
+                                    GUI.backgroundColor = WeaponOpData.Carrier_based_fighter_Color;
                                     break;
 
                                 case WeaponType.Water_fighter://水上戦闘機
-                                    GUI.backgroundColor = Color.green + Color.yellow;
+                                    GUI.backgroundColor = WeaponOpData.Water_fighter_Color;
                                     break;
 
                                 case WeaponType.Shipboard_bomber://艦上爆撃機
-                                    GUI.backgroundColor =  Color.red + Color.red;
+                                    GUI.backgroundColor = WeaponOpData.Shipboard_bomber_Color;
                                     break;
 
                                 case WeaponType.Water_bomber://水上爆撃機
-                                    GUI.backgroundColor = Color.green;
+                                    GUI.backgroundColor = WeaponOpData.Water_bomber_Color;
                                     break;
 
                                 case WeaponType.Carrier_based_attack_aircraft://艦上攻撃機
-                                    GUI.backgroundColor = Color.green + Color.blue;
+                                    GUI.backgroundColor = WeaponOpData.Carrier_based_attack_aircraft_Color;
                                     break;
 
                                 case WeaponType.Ship_reconnaissance_aircraft://艦上偵察機
-                                    GUI.backgroundColor = Color.green;
+                                    GUI.backgroundColor = WeaponOpData.Ship_reconnaissance_aircraft_Color;
                                     break;
 
                                 case WeaponType.Water_reconnaissance_aircraft://水上偵察機
-                                    GUI.backgroundColor = Color.green;
+                                    GUI.backgroundColor = WeaponOpData.Water_reconnaissance_aircraft_Color;
                                     break;
 
                                 case WeaponType.Anti_submarine_patrol_aircraft://対潜哨戒機
-                                    
+                                    GUI.backgroundColor = WeaponOpData.Anti_submarine_patrol_aircraft_Color;
                                     break;
 
                                 case WeaponType.Electric_search://電探
-                                    GUI.backgroundColor = Color.green + Color.red + Color.red;
+                                    GUI.backgroundColor =WeaponOpData.Electric_search_Color;
                                     break;
 
                                 case WeaponType.Organ://機関
-                                    
+                                    GUI.backgroundColor = WeaponOpData.Organ_Color;
                                     break;
 
                                 case WeaponType.Enhanced_bullet://強化弾
-                                    
+                                    GUI.backgroundColor = WeaponOpData.Enhanced_bullet_Color;
                                     break;
 
                                 case WeaponType.Anti_aircraft_machine_gun://対空機銃
-                                  
+                                    GUI.backgroundColor = WeaponOpData.Anti_aircraft_machine_gun_Color;
                                     break;
 
                                 case WeaponType.Anti_aircraft_device://高射装置
-                                   
+                                    GUI.backgroundColor = WeaponOpData.Anti_aircraft_device_Color;
                                     break;
 
                                 case WeaponType.Depth_charge://爆雷
-                                    
+                                    GUI.backgroundColor = WeaponOpData.Depth_charge_Color;
                                     break;
 
                                 case WeaponType.Sonar://ソナー
-                                  
+                                    GUI.backgroundColor = WeaponOpData.Sonar_Color;
                                     break;
 
                                 case WeaponType.Repai_personnel://修理要員
-                                   
+                                    GUI.backgroundColor = WeaponOpData.Repai_personnel_Color;
                                     break;
 
                                 case WeaponType.Expansion_basil://増設バジル
-                                   
+                                    GUI.backgroundColor = WeaponOpData.Expansion_basil_Color;
                                     break;
 
                                 case WeaponType.No_classification://分類無
-                                    
+                                    GUI.backgroundColor = WeaponOpData.No_classification_Color;
                                     break;
 
                                 case WeaponType.Land_attack_aircraft://陸上攻撃機
-                                    GUI.backgroundColor = Color.green;
+                                    GUI.backgroundColor = WeaponOpData.Land_attack_aircraft_Color;
                                     break;
 
                                 case WeaponType.Land_reconnaissance_aircraft://陸上偵察機
-                                    GUI.backgroundColor = Color.green;
+                                    GUI.backgroundColor = WeaponOpData.Land_reconnaissance_aircraft_Color;
                                     break;
 
                                 case WeaponType.Local_fighter://局地戦闘機
-                                    GUI.backgroundColor = Color.green;
+                                    GUI.backgroundColor = WeaponOpData.Local_fighter_Color;
                                     break;
 
                                 case WeaponType.Army_fighter://陸軍戦闘機
-                                    GUI.backgroundColor = Color.green;
+                                    GUI.backgroundColor = WeaponOpData.Army_fighter_Color;
                                     break;
                             }
 
-                            if (Weapondata[i].No == SelctitemNo+1) GUI.backgroundColor = Color.black;//選択しているものの色を変更
+                            if (Weapondata[i].No == SelctitemNo+1) GUI.backgroundColor = WeaponOpData.Select_Color;//選択しているものの色を変更
 
                             if (GUILayout.Button(DataName[i]))
                             {
