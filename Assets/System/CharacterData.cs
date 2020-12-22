@@ -11,7 +11,7 @@ public class CharacterData : ScriptableObject
     public int BookNo;
 
     [Header("名前")]
-    public string Name;
+    public string CharacterName;
 
     [Header("艦種")]
     public ShipType Type;
@@ -81,7 +81,30 @@ public class CharacterData : ScriptableObject
     public WeaponData[] ds = new WeaponData[0];
 
     [Header("改造レベル")]
-    public int Remodeling_level;
+    public int Remodeling_Level;
+
+    [Header("改造必要鋼材")]
+    public int Steel;
+    [Header("改造必要弾薬")]
+    public int Ammunition;
+    [Header("改造必要開発資材")]
+    public int Development_Materials;
+    [Header("改造必要高速建造材")]
+    public int HighSpeed_Construction_material;
+
+    [Header("改造必要改装設計図")]
+    public int Refurbished_Blueprint;
+    [Header("改造必要戦闘詳報")]
+    public int Detailedbattle_Report;
+    [Header("改造必要試製甲板カタパルト")]
+    public int Trialdeck_Catapult;
+    [Header("改造必要新型航空兵装資材")]
+    public int Newaviationarmament_Materials;
+    [Header("改造必要新型砲熕兵装資材")]
+    public int Newartilleryweapon_Materials;
+
+    [Header("改造先")]
+    public CharacterData Remodeling_Destination;
 
     [Header("画像")]
     public Sprite Imag;

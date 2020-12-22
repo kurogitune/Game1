@@ -30,5 +30,5 @@ MonoBehaviour:
   Refurbishment_Count: 0
   development: 0
   Equipable_ship_type: 000000000101000000
-  Type: 6
+  Type: 9
   Imag: {fileID: 21300000, guid: d137e2d4a092b1246a696ea749456af9, type: 3}

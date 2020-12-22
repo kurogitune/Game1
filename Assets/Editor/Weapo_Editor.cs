@@ -138,7 +138,6 @@ public class Weapo_Editor : EditorWindow//武器エディタ
 
     //左表示関連
     WeaponData[] Weapondata=new WeaponData[0];//データ
-    string[] DataName = new string[0];//ファイル名
     Vector2 LehtBox = Vector2.zero;
     Vector2 RigitBox = Vector2.zero;
     private void OnGUI()
@@ -149,7 +148,6 @@ public class Weapo_Editor : EditorWindow//武器エディタ
         if (Weapondata.Length != fild.Length)
         {
            Weapondata = new WeaponData[fild.Length];
-           DataName = new string[fild.Length];
            for(int i=0;i<fild.Length ; i++)
            {
                 string path = dir + "/" +fild[i].Name;
@@ -162,7 +160,6 @@ public class Weapo_Editor : EditorWindow//武器エディタ
             for (int i = 0; i < Weapondata.Length; i++)//No順に入れかえ
             {
                 data[Weapondata[i].No-1] = Weapondata[i];
-                DataName[Weapondata[i].No - 1] = data[Weapondata[i].No - 1].name;
             }
 
             Weapondata = data;           
@@ -300,7 +297,7 @@ public class Weapo_Editor : EditorWindow//武器エディタ
 
                             if (Weapondata[i].No == SelctitemNo+1) GUI.backgroundColor = WeaponOpData.Select_Color;//選択しているものの色を変更
 
-                            if (GUILayout.Button(DataName[i]))
+                            if (GUILayout.Button(Weapondata[i].WeaponName))
                             {
                                 if (i != ItemNo) ItemNo = i;
                             }
@@ -325,11 +322,11 @@ public class Weapo_Editor : EditorWindow//武器エディタ
             //以下データ変更処理
             using (new EditorGUILayout.VerticalScope(GUI.skin.box))//ここから縦並び
             {
-                RigitBox = EditorGUILayout.BeginScrollView(RigitBox, GUI.skin.box);//選択枠
-                { 
+               RigitBox = EditorGUILayout.BeginScrollView(RigitBox, GUI.skin.box);//選択枠
+              { 
 
-                EditorGUI.BeginDisabledGroup(DataName.Length == 0);//こいつで囲んだボタンをおせなくする
-               if(DataName.Length!=0) EditorGUILayout.LabelField("武器データ変更 : "+DataName[ItemNo]);
+                EditorGUI.BeginDisabledGroup(Weapondata.Length == 0);//こいつで囲んだボタンをおせなくする
+                if(Weapondata.Length!=0) EditorGUILayout.LabelField("武器データ変更 : "+ Weapondata[ItemNo].WeaponName);
                 else EditorGUILayout.LabelField("武器データ変更");
 
                 using (new EditorGUILayout.HorizontalScope(GUI.skin.box))
@@ -536,7 +533,7 @@ public class Weapo_Editor : EditorWindow//武器エディタ
                         }
                     }
                     EditorGUILayout.EndScrollView();
-                }
+              }
             }//ここまで
         }
 
