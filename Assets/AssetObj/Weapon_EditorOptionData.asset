@@ -23,9 +23,9 @@ MonoBehaviour:
   Carrier_based_fighter_Color: {r: 0, g: 1, b: 0, a: 1}
   Water_fighter_Color: {r: 1, g: 1.9215686, b: 0.015686275, a: 2}
   Shipboard_bomber_Color: {r: 2, g: 0, b: 0, a: 2}
-  Water_bomber_Color: {r: 0, g: 1, b: 0, a: 1}
+  Water_bomber_Color: {r: 0.2787469, g: 0.6792453, b: 0.32324675, a: 1}
   Carrier_based_attack_aircraft_Color: {r: 0, g: 1, b: 1, a: 2}
-  Ship_reconnaissance_aircraft_Color: {r: 0, g: 1, b: 0, a: 1}
+  Ship_reconnaissance_aircraft_Color: {r: 1, g: 0.6825919, b: 0, a: 1}
   Water_reconnaissance_aircraft_Color: {r: 0, g: 1, b: 0, a: 1}
   Anti_submarine_patrol_aircraft_Color: {r: 0, g: 0, b: 0, a: 0}
   Electric_search_Color: {r: 2, g: 1, b: 0, a: 3}

@@ -67,6 +67,7 @@ public enum WeaponType//武器タイプ
     Carrier_based_fighter,//艦上戦闘機
     Water_fighter,//水上戦闘機
     Shipboard_bomber,//艦上爆撃機
+    Jetfighter_bomber,//噴式戦闘爆撃機
     Water_bomber,//水上爆撃機
     Carrier_based_attack_aircraft,//艦上攻撃機
     Ship_reconnaissance_aircraft,//艦上偵察機
