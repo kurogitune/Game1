@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede46caeca6ccd848b7dececd22c5061, type: 3}
+  m_Name: "Bofors 40mm\u56DB\u9023\u88C5\u6A5F\u95A2\u7832"
+  m_EditorClassIdentifier: 
+  No: 315
+  WeaponName: "Bofors 40mm\u56DB\u9023\u88C5\u6A5F\u95A2\u7832"
+  Rarity: 4
+  BookNo: 173
+  FirepowerP: 1
+  ThunderstormP: 0
+  BombP: 0
+  Anti_aircraftP: 10
+  Anti_submarine: 0
+  SearchenemyP: 0
+  Hit_rate: 1
+  Evasion_rate: 2
+  ArmorP: 1
+  Range: 0
+  Radius: 0
+  Refurbishment_Count: 0
+  development: 0
+  Equipable_ship_type: 010101010101010100
+  Type: 19
+  Imag: {fileID: 21300000, guid: 03ee5a120f937174390fb215d51443c0, type: 3}

@@ -77,8 +77,8 @@ public class CharacterData : ScriptableObject
     [Header("艦載機搭載数")]
     public int[] Numberofmounted = new int[5];
 
-    [Header("例外装備可能武器")]
-    public WeaponData[] ds = new WeaponData[0];
+    [Header("例外装備可能装備")]
+    public WeaponData[]Exceptionalequipmentavailableequipment = new WeaponData[0];
 
     [Header("改造レベル")]
     public int Remodeling_Level;

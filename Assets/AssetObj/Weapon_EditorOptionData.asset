@@ -16,28 +16,30 @@ MonoBehaviour:
   Null_Color: {r: 1, g: 1, b: 1, a: 1}
   Small_caliber_gun_Color: {r: 1, g: 0.09470569, b: 0, a: 1}
   Medium_caliber_gun_Color: {r: 0.4811321, g: 0.0022694964, b: 0.0022694964, a: 1}
-  Large_caliber_gun_Color: {r: 1, g: 0, b: 0.60941887, a: 1}
+  Large_caliber_gun_Color: {r: 1, g: 0, b: 0.6078434, a: 1}
   Secondary_armament_Color: {r: 1, g: 1, b: 0.015686275, a: 1}
   Torpedo_Color: {r: 0, g: 0, b: 1, a: 1}
-  Ship_mounted_boat_Color: {r: 0.73393774, g: 0, b: 1, a: 1}
+  Ship_mounted_boat_Color: {r: 0.7333336, g: 0, b: 1, a: 1}
   Carrier_based_fighter_Color: {r: 0, g: 1, b: 0, a: 1}
-  Water_fighter_Color: {r: 1, g: 1.9215686, b: 0.015686275, a: 2}
-  Shipboard_bomber_Color: {r: 2, g: 0, b: 0, a: 2}
+  Water_fighter_Color: {r: 0.39816284, g: 0.764151, b: 0, a: 2}
+  Shipboard_bomber_Color: {r: 1, g: 0, b: 0.24827147, a: 2}
   Water_bomber_Color: {r: 0.2787469, g: 0.6792453, b: 0.32324675, a: 1}
-  Carrier_based_attack_aircraft_Color: {r: 0, g: 1, b: 1, a: 2}
+  Carrier_based_attack_aircraft_Color: {r: 0, g: 0.62411404, b: 1, a: 2}
   Ship_reconnaissance_aircraft_Color: {r: 1, g: 0.6825919, b: 0, a: 1}
-  Water_reconnaissance_aircraft_Color: {r: 0, g: 1, b: 0, a: 1}
-  Anti_submarine_patrol_aircraft_Color: {r: 0, g: 0, b: 0, a: 0}
-  Electric_search_Color: {r: 2, g: 1, b: 0, a: 3}
-  Organ_Color: {r: 0, g: 0, b: 0, a: 0}
-  Enhanced_bullet_Color: {r: 0, g: 0, b: 0, a: 0}
-  Anti_aircraft_machine_gun_Color: {r: 0, g: 0, b: 0, a: 0}
-  Anti_aircraft_device_Color: {r: 0, g: 0, b: 0, a: 0}
-  Depth_charge_Color: {r: 0, g: 0, b: 0, a: 0}
-  Sonar_Color: {r: 0, g: 0, b: 2, a: 2}
-  Repai_personnel_Color: {r: 0, g: 0, b: 0, a: 0}
-  Expansion_basil_Color: {r: 0, g: 0, b: 0, a: 0}
-  No_classification_Color: {r: 1, g: 1, b: 1, a: 1}
+  Water_reconnaissance_aircraft_Color: {r: 0.14827341, g: 0.6415094, b: 0.43784288,
+    a: 1}
+  Anti_submarine_patrol_aircraft_Color: {r: 0.7264151, g: 0.39141327, b: 0.38033998,
+    a: 1}
+  Electric_search_Color: {r: 1, g: 0.43646842, b: 0, a: 3}
+  Organ_Color: {r: 1, g: 0.8220959, b: 0.3726415, a: 1}
+  Enhanced_bullet_Color: {r: 0.20901565, g: 0.3196985, b: 0.5754717, a: 1}
+  Anti_aircraft_machine_gun_Color: {r: 0.21683754, g: 0.31132078, b: 0, a: 1}
+  Anti_aircraft_device_Color: {r: 0.20503923, g: 0.08419366, b: 0.41509432, a: 1}
+  Depth_charge_Color: {r: 0, g: 0.9596045, b: 1, a: 2}
+  Sonar_Color: {r: 1, g: 1, b: 0.8000001, a: 1}
+  Repai_personnel_Color: {r: 0.9843138, g: 0.6666667, b: 0.7137255, a: 1}
+  Expansion_basil_Color: {r: 0.6627451, g: 0.64705884, b: 0.6039216, a: 1}
+  No_classification_Color: {r: 0.454902, g: 0.34901962, b: 0.64705884, a: 1}
   Land_attack_aircraft_Color: {r: 0, g: 1, b: 0, a: 1}
   Land_reconnaissance_aircraft_Color: {r: 0, g: 1, b: 0, a: 1}
   Local_fighter_Color: {r: 0, g: 1, b: 0, a: 1}

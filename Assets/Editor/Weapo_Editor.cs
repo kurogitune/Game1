@@ -422,26 +422,7 @@ public class Weapo_Editor : EditorWindow//武器エディタ
                         if (ItemNo != SelctitemNo)//代入先が変更されたら
                         {
                             SelctitemNo = ItemNo;
-                            //一時保存データ初期化
-                            WeapoName = Weapondata[SelctitemNo].WeaponName;
-                            WeapoNo = Weapondata[SelctitemNo].No;
-                            BookNo = Weapondata[SelctitemNo].BookNo;
-                            development = Weapondata[SelctitemNo].development;
-                            Rarity = Weapondata[SelctitemNo].Rarity;
-                            FirepowerP = Weapondata[SelctitemNo].FirepowerP;
-                            ThunderstormP = Weapondata[SelctitemNo].ThunderstormP;
-                            BombP = Weapondata[SelctitemNo].BombP;
-                            Anti_aircraftP = Weapondata[SelctitemNo].Anti_aircraftP;
-                            Anti_submarine = Weapondata[SelctitemNo].Anti_submarine;
-                            SearchenemyP = Weapondata[SelctitemNo].SearchenemyP;
-                            Hit_rate = Weapondata[SelctitemNo].Hit_rate;
-                            Evasion_rate = Weapondata[SelctitemNo].Evasion_rate;
-                            ArmorP = Weapondata[SelctitemNo].ArmorP;
-                            Range = Weapondata[SelctitemNo].Range;
-                            Radius = Weapondata[SelctitemNo].Radius;
-                            type = Weapondata[SelctitemNo].Type;
-                            Equipable_ship_type = Weapondata[SelctitemNo].Equipable_ship_type;
-                            ImagData = Weapondata[SelctitemNo].Imag;
+                            DataReset();                     
                         }
 
                         using (new EditorGUILayout.HorizontalScope(GUI.skin.box))
@@ -461,26 +442,7 @@ public class Weapo_Editor : EditorWindow//武器エディタ
                             EditorGUI.BeginDisabledGroup(Data_change);//こいつで囲んだボタンをおせなくする
                             if (GUILayout.Button("Reset"))
                             {
-                                //一時保存データ初期化
-                                WeapoName = Weapondata[SelctitemNo].WeaponName;
-                                WeapoNo = Weapondata[SelctitemNo].No;
-                                BookNo = Weapondata[SelctitemNo].BookNo;
-                                development = Weapondata[SelctitemNo].development;
-                                Rarity = Weapondata[SelctitemNo].Rarity;
-                                FirepowerP = Weapondata[SelctitemNo].FirepowerP;
-                                ThunderstormP = Weapondata[SelctitemNo].ThunderstormP;
-                                BombP = Weapondata[SelctitemNo].BombP;
-                                Anti_aircraftP = Weapondata[SelctitemNo].Anti_aircraftP;
-                                Anti_submarine = Weapondata[SelctitemNo].Anti_submarine;
-                                SearchenemyP = Weapondata[SelctitemNo].SearchenemyP;
-                                Hit_rate = Weapondata[SelctitemNo].Hit_rate;
-                                Evasion_rate = Weapondata[SelctitemNo].Evasion_rate;
-                                ArmorP = Weapondata[SelctitemNo].ArmorP;
-                                Range = Weapondata[SelctitemNo].Range;
-                                Radius = Weapondata[SelctitemNo].Radius;
-                                type = Weapondata[SelctitemNo].Type;
-                                Equipable_ship_type = Weapondata[SelctitemNo].Equipable_ship_type;
-                                ImagData = Weapondata[SelctitemNo].Imag;
+                                DataReset();
                             }
 
                             if (GUILayout.Button("Save"))
@@ -507,27 +469,7 @@ public class Weapo_Editor : EditorWindow//武器エディタ
                                 Weapondata[SelctitemNo].Imag = Imag;
                                 EditorUtility.SetDirty(Weapondata[SelctitemNo]);//指定したScriptObject変更を記録
                                 AssetDatabase.SaveAssets();//ScriptObjectをセーブする
-
-                                //一時保存データ初期化
-                                WeapoName = Weapondata[SelctitemNo].WeaponName;
-                                WeapoNo = Weapondata[SelctitemNo].No;
-                                BookNo = Weapondata[SelctitemNo].BookNo;
-                                development = Weapondata[SelctitemNo].development;
-                                Rarity = Weapondata[SelctitemNo].Rarity;
-                                FirepowerP = Weapondata[SelctitemNo].FirepowerP;
-                                ThunderstormP = Weapondata[SelctitemNo].ThunderstormP;
-                                BombP = Weapondata[SelctitemNo].BombP;
-                                Anti_aircraftP = Weapondata[SelctitemNo].Anti_aircraftP;
-                                Anti_submarine = Weapondata[SelctitemNo].Anti_submarine;
-                                SearchenemyP = Weapondata[SelctitemNo].SearchenemyP;
-                                Hit_rate = Weapondata[SelctitemNo].Hit_rate;
-                                Evasion_rate = Weapondata[SelctitemNo].Evasion_rate;
-                                ArmorP = Weapondata[SelctitemNo].ArmorP;
-                                Range = Weapondata[SelctitemNo].Range;
-                                Radius = Weapondata[SelctitemNo].Radius;
-                                type = Weapondata[SelctitemNo].Type;
-                                Equipable_ship_type = Weapondata[SelctitemNo].Equipable_ship_type;
-                                ImagData = Weapondata[SelctitemNo].Imag;
+                                DataReset();
                             }
                             EditorGUI.EndDisabledGroup();//ここまで
                         }
@@ -546,6 +488,29 @@ public class Weapo_Editor : EditorWindow//武器エディタ
                 menu.ShowAsContext();
                 break;
         }
+    }
+
+    void DataReset()//一時保存データ初期化
+    {
+        WeapoName = Weapondata[SelctitemNo].WeaponName;
+        WeapoNo = Weapondata[SelctitemNo].No;
+        BookNo = Weapondata[SelctitemNo].BookNo;
+        development = Weapondata[SelctitemNo].development;
+        Rarity = Weapondata[SelctitemNo].Rarity;
+        FirepowerP = Weapondata[SelctitemNo].FirepowerP;
+        ThunderstormP = Weapondata[SelctitemNo].ThunderstormP;
+        BombP = Weapondata[SelctitemNo].BombP;
+        Anti_aircraftP = Weapondata[SelctitemNo].Anti_aircraftP;
+        Anti_submarine = Weapondata[SelctitemNo].Anti_submarine;
+        SearchenemyP = Weapondata[SelctitemNo].SearchenemyP;
+        Hit_rate = Weapondata[SelctitemNo].Hit_rate;
+        Evasion_rate = Weapondata[SelctitemNo].Evasion_rate;
+        ArmorP = Weapondata[SelctitemNo].ArmorP;
+        Range = Weapondata[SelctitemNo].Range;
+        Radius = Weapondata[SelctitemNo].Radius;
+        type = Weapondata[SelctitemNo].Type;
+        Equipable_ship_type = Weapondata[SelctitemNo].Equipable_ship_type;
+        ImagData = Weapondata[SelctitemNo].Imag;
     }
 
     void File_Set()//ファイル追加処理
